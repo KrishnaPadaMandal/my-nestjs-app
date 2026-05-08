@@ -12,7 +12,7 @@ async function bootstrap() {
 
   // ✅ Swagger Setup
   const config = new DocumentBuilder()
-    .setTitle('My API V2')
+    .setTitle('CI/CD')
     .setDescription('Production Ready API')
     .setVersion('1.0')
     .addBearerAuth()
