@@ -12,7 +12,7 @@ async function bootstrap() {
 
   // ✅ Swagger Setup
   const config = new DocumentBuilder()
-    .setTitle('CI/CD Docker')
+    .setTitle('CI/CD Docker U1')
     .setDescription('Production Ready API')
     .setVersion('1.0')
     .addBearerAuth()
