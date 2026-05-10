@@ -20,9 +20,8 @@ async function bootstrap() {
 
   const document = SwaggerModule.createDocument(app, config);
 
-  if (process.env.NODE_ENV !== 'production') {
-    SwaggerModule.setup('api', app, document);
-  }
+  // ✅ ENABLE SWAGGER FOR ALL ENVIRONMENTS
+  SwaggerModule.setup('api', app, document);
 
   // ✅ PORT
   const port = process.env.PORT || 3000;
@@ -35,10 +34,7 @@ async function bootstrap() {
   logger.log(`🚀 Application is running successfully`);
   logger.log(`🌍 Environment: ${process.env.NODE_ENV}`);
   logger.log(`📌 Server URL: http://localhost:${port}`);
-
-  if (process.env.NODE_ENV !== 'production') {
-    logger.log(`📚 Swagger URL: http://localhost:${port}/api`);
-  }
+  logger.log(`📚 Swagger URL: http://localhost:${port}/api`);
 }
 
 bootstrap();
